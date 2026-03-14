@@ -5,10 +5,12 @@ type BowlerTableProps = {
 }
 
 const formatName = (bowler: Bowler) => {
+  // Middle initial is optional in the source data.
   const middle = bowler.bowlerMiddleInit ? ` ${bowler.bowlerMiddleInit}.` : ''
   return `${bowler.bowlerFirstName}${middle} ${bowler.bowlerLastName}`
 }
 
+// Keep the table readable when a nullable DB field is missing.
 const valueOrDash = (value: string | null) => value ?? '-'
 
 const BowlerTable = ({ bowlers }: BowlerTableProps) => {

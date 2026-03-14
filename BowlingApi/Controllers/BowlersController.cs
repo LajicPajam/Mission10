@@ -18,6 +18,7 @@ public class BowlersController(BowlingLeagueContext context) : ControllerBase
             .Where(b => b.Team != null && (b.Team.TeamName == "Marlins" || b.Team.TeamName == "Sharks"))
             .OrderBy(b => b.BowlerLastName)
             .ThenBy(b => b.BowlerFirstName)
+            // Project only the fields the assignment asks the UI to display.
             .Select(b => new BowlerDto
             {
                 BowlerFirstName = b.BowlerFirstName ?? string.Empty,

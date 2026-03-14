@@ -16,7 +16,9 @@ public class Bowler
     public string? BowlerZip { get; set; }
     public string? BowlerPhoneNumber { get; set; }
 
+    // Foreign key relationship back to Teams.TeamID.
     [ForeignKey("Team")]
     public int? TeamID { get; set; }
+    // Navigation property used for team joins in queries.
     public Team? Team { get; set; }
 }
