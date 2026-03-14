@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="BowlingApi.Tests/BowlingApi.Tests.csproj" />
+  <Project Path="BowlingApi/BowlingApi.csproj" />
+</Solution>
